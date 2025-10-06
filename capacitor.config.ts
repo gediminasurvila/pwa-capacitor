@@ -6,7 +6,7 @@ const config: CapacitorConfig = {
   webDir: ".",
   server: {
     // For iOS native build, point this to your deployed PWA URL
-    url: "https://yourapp.com",
+    url: "https://pwa-capacitor.netlify.app",
     cleartext: true,
   },
 };
