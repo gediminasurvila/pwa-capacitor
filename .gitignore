@@ -19,6 +19,7 @@ android/
 ios/
 
 # Bubblewrap
+app/
 android.keystore
 gradle/
 gradle.properties
