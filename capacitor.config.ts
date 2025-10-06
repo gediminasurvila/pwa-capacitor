@@ -1,0 +1,14 @@
+import { CapacitorConfig } from "@capacitor/cli";
+
+const config: CapacitorConfig = {
+  appId: "com.example.cappwatest",
+  appName: "Capacitor PWA Test",
+  webDir: ".",
+  server: {
+    // For iOS native build, point this to your deployed PWA URL
+    url: "https://yourapp.com",
+    cleartext: true,
+  },
+};
+
+export default config;
