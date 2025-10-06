@@ -92,15 +92,21 @@ ios/App/App/Info.plist
 Add the following keys for common permissions:
 
 ```xml
-	<!-- Permissions you actually need -->
-	<key>NSCameraUsageDescription</key>
-	<string>This app needs access to the camera.</string>
+<!-- Permissions -->
+<key>NSCameraUsageDescription</key>
+<string>This app needs access to the camera.</string>
 
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This app needs your location to provide location-based features.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>This app needs access to your photo library.</string>
 
-	<key>NSUserNotificationUsageDescription</key>
-	<string>This app needs permission to send notifications.</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>This app needs permission to save photos to your library.</string>
+
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>This app needs your location to provide location-based features.</string>
+
+<key>NSUserNotificationUsageDescription</key>
+<string>This app needs permission to send notifications.</string>
 ```
 
 **How to add:**
