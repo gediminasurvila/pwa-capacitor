@@ -1,7 +1,6 @@
 {
   "name": "pwa-capacitor",
   "version": "1.0.0",
-  "main": "service-worker.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
