@@ -9,6 +9,11 @@ const config: CapacitorConfig = {
     url: "https://pwa-capacitor.netlify.app",
     cleartext: true,
   },
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false,
+    },
+  },
 };
 
 export default config;
