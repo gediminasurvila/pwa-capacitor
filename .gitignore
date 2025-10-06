@@ -19,7 +19,9 @@ android/
 ios/
 
 # Bubblewrap
+.gradle/
 app/
+build
 android.keystore
 gradle/
 gradle.properties
@@ -28,3 +30,7 @@ gradlew
 gradlew.bat
 manifest-checksum.txt
 settings.gradle
+app-release-bundle.aab
+app-release-signed.apk
+app-release-signed.apk.idsig
+app-release-unsigned-aligned.apk
