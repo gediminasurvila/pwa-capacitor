@@ -53,6 +53,79 @@ You can package this PWA as an Android app and publish it to Google Play using B
 
 For more info, see the [Bubblewrap documentation](https://github.com/GoogleChromeLabs/bubblewrap).
 
+## Packaging for iOS with Capacitor
+
+You can package this PWA as an iOS app using Capacitor:
+
+1. **Install Capacitor CLI (if not already):**
+   ```sh
+   npm install --save @capacitor/core @capacitor/cli
+   ```
+2. **Add iOS platform:**
+   ```sh
+   npx cap add ios
+   ```
+3. **Build your web app:**
+   ```sh
+   npm run build
+   ```
+4. **Copy the build output to the iOS project:**
+   ```sh
+   npx cap copy ios
+   ```
+5. **Open the iOS project in Xcode:**
+   ```sh
+   npx cap open ios
+   ```
+6. **Configure, sign, and publish your app to the App Store using Xcode.**
+
+For more info, see the [Capacitor documentation](https://capacitorjs.com/docs/getting-started).
+
+## iOS Permissions and Info.plist
+
+When using native iOS features (like Camera, Geolocation, Notifications, etc.) with Capacitor, you must declare permissions in your iOS app's `Info.plist` file. This file is located in your iOS project at:
+
+```
+ios/App/App/Info.plist
+```
+
+Add the following keys for common permissions:
+
+- **Camera:**
+  ```xml
+  <key>NSCameraUsageDescription</key>
+  <string>This app needs access to the camera.</string>
+  ```
+- **Location:**
+  ```xml
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>This app needs your location to provide location-based features.</string>
+  ```
+- **Photo Library:**
+  ```xml
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>This app needs access to your photo library.</string>
+  ```
+- **Notifications:**
+  ```xml
+  <key>NSUserNotificationUsageDescription</key>
+  <string>This app needs permission to send notifications.</string>
+  ```
+- **Microphone:**
+  ```xml
+  <key>NSMicrophoneUsageDescription</key>
+  <string>This app needs access to the microphone.</string>
+  ```
+
+**How to add:**
+
+1. Open your iOS project in Xcode (`npx cap open ios`).
+2. In the Project Navigator, find `App/App/Info.plist`.
+3. Add the required keys and descriptions for each feature your app uses.
+4. Save and rebuild your app.
+
+For more info, see the [Apple documentation](https://developer.apple.com/documentation/bundleresources/information_property_list) and [Capacitor iOS guide](https://capacitorjs.com/docs/v5/ios).
+
 ## License
 
 MIT
