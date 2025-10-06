@@ -126,6 +126,26 @@ Add the following keys for common permissions:
 
 For more info, see the [Apple documentation](https://developer.apple.com/documentation/bundleresources/information_property_list) and [Capacitor iOS guide](https://capacitorjs.com/docs/v5/ios).
 
+## Why assetlinks.json is needed
+
+When publishing your PWA as an Android app using Bubblewrap (Trusted Web Activity), you must host a file called `assetlinks.json` at `/.well-known/assetlinks.json` on your website. This file is required by Android to verify the relationship between your website and your app.
+
+**Purpose:**
+
+- Allows your Android app to open your PWA in full-screen mode without browser UI.
+- Enables deep linking and app-to-website trust (Digital Asset Links).
+- Required for your app to pass Play Store review and work as a Trusted Web Activity.
+
+**How it works:**
+
+- The file contains a JSON object with your app's package name and signing key.
+- Android checks this file to confirm your app is authorized to show your website in a TWA.
+
+**Reference:**
+
+- [Digital Asset Links documentation](https://developer.android.com/trusted-web-activity/quick-start#digital-asset-links)
+- [Bubblewrap assetlinks.json guide](https://github.com/GoogleChromeLabs/bubblewrap/blob/main/docs/asset-links.md)
+
 ## License
 
 MIT
