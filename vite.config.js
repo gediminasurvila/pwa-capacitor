@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   root: "src",
@@ -8,6 +9,16 @@ export default defineConfig({
       input: "src/index.html",
     },
   },
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: "manifest.json",
+          dest: "../dist",
+        },
+      ],
+    }),
+  ],
   server: {
     open: "/index.html",
   },
