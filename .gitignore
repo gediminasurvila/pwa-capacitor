@@ -17,3 +17,13 @@ yarn-error.log*
 # Capacitor
 android/
 ios/
+
+# Bubblewrap
+android.keystore
+gradle/
+gradle.properties
+build.gradle
+gradlew
+gradlew.bat
+manifest-checksum.txt
+settings.gradle
